@@ -1,0 +1,43 @@
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.carousel-container{
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.img-container{
+    height: 100%;
+}
+
+.immagine{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    position: relative;
+ }
+
+ .arr-down {
+    font-size: 30px;
+    position: absolute;
+    bottom: 110px;
+    left: 600px;
+    color: green;
+}
+
+.arr-up {
+    font-size: 30px;
+    position: absolute;
+    top: 110px;
+    right: 600px;
+    color: green;
+}
