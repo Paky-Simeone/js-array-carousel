@@ -20,7 +20,7 @@
 .immagine{
     height: 100%;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     object-fit: cover;
@@ -54,4 +54,8 @@
     border: 1px solid rgb(185, 185, 185);
     border-radius: 50%;
     background-color: rgb(185, 185, 185);
+}
+
+.active{
+    display: block;
 }
