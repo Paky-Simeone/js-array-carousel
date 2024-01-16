@@ -10,6 +10,7 @@
     width: 1000px;
     height: 500px;
     overflow: hidden;
+    position: relative;
 }
 
 .img-container{
@@ -23,21 +24,34 @@
     justify-content: center;
     align-items: center;
     object-fit: cover;
-    position: relative;
  }
 
  .arr-down {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
     font-size: 30px;
     position: absolute;
-    bottom: 110px;
-    left: 600px;
-    color: green;
+    bottom: 0px;
+    left: 50%;
+    color: black;
+    transform: translateX(-50%);
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 50%;
+    background-color: rgb(185, 185, 185);
 }
 
 .arr-up {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
     font-size: 30px;
     position: absolute;
-    top: 110px;
-    right: 600px;
-    color: green;
+    top: 0px;
+    left: 50%;
+    color: black;
+    transform: translateX(-50%);
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 50%;
+    background-color: rgb(185, 185, 185);
 }
