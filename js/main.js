@@ -6,6 +6,7 @@ let indice = 0;
 let slidehtml = ''; 
 
 
+
 for(let i = 0; i < listaimmagini.length; i++){
     let immagine = listaimmagini[i];
     let immagineactive = '';
@@ -23,10 +24,7 @@ for(let i = 0; i < listaimmagini.length; i++){
 }
 containerimmagini.innerHTML = slidehtml;
 
-
-
-arrdown.addEventListener('click', function(){
-
+function nextSlide(){
     let immaginecorrente = document.querySelector('.active');
     immaginecorrente.classList.remove('active');
 
@@ -39,10 +37,9 @@ arrdown.addEventListener('click', function(){
         indice = 0;
     }
     allslide[indice].classList.add('active');
-})
+}
 
-arrup.addEventListener('click', function(){
-
+function prewievSlide(){
     let immaginecorrente = document.querySelector('.active');
     immaginecorrente.classList.remove('active');
 
@@ -55,20 +52,18 @@ arrup.addEventListener('click', function(){
         indice = 4;
     }
     allslide[indice].classList.add('active');
+}
+
+arrdown.addEventListener('click', nextSlide);
+
+arrup.addEventListener('click', prewievSlide);
+
+let scrolling = setInterval(nextSlide, 3000);
+
+containerimmagini.addEventListener('mouseover', function() {
+    clearInterval(scrolling);
 })
 
-setInterval(function(){
-    let immaginecorrente = document.querySelector('.active');
-    immaginecorrente.classList.remove('active');
-
-    const allslide = document.getElementsByClassName('immagine');
-
-    if(indice < allslide.length -1){
-        indice++;
-    }
-    else{
-        indice = 0;
-    }
-    allslide[indice].classList.add('active');
-}, 3000);
-    
+containerimmagini.addEventListener('mouseout', function(){
+    scrolling = setInterval(nextSlide, 3000);
+})
