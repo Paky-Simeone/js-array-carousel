@@ -62,8 +62,8 @@ let scrolling = setInterval(nextSlide, 3000);
 
 containerimmagini.addEventListener('mouseover', function() {
     clearInterval(scrolling);
-})
+});
 
 containerimmagini.addEventListener('mouseout', function(){
     scrolling = setInterval(nextSlide, 3000);
-})
+});
