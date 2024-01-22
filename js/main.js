@@ -5,6 +5,7 @@ const arrdown = document.getElementById('freccia-giu');
 let indice = 0;
 let slidehtml = ''; 
 
+
 for(let i = 0; i < listaimmagini.length; i++){
     let immagine = listaimmagini[i];
     let immagineactive = '';
@@ -21,6 +22,7 @@ for(let i = 0; i < listaimmagini.length; i++){
 
 }
 containerimmagini.innerHTML = slidehtml;
+
 
 
 arrdown.addEventListener('click', function(){
@@ -55,4 +57,18 @@ arrup.addEventListener('click', function(){
     allslide[indice].classList.add('active');
 })
 
+setInterval(function(){
+    let immaginecorrente = document.querySelector('.active');
+    immaginecorrente.classList.remove('active');
 
+    const allslide = document.getElementsByClassName('immagine');
+
+    if(indice < allslide.length -1){
+        indice++;
+    }
+    else{
+        indice = 0;
+    }
+    allslide[indice].classList.add('active');
+}, 3000);
+    
